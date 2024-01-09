@@ -4,6 +4,5 @@
 ### クラス：SD2B
 ### 氏名：深井　陽稀
 ### システム名：トレ「ガ」ジャー
-### URL：wait
+### HyperLink：wait
 ### For School Assignments.
-
