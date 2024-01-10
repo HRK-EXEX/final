@@ -1,11 +1,11 @@
 .master-box {
     display: flex;
-    background: #f0f080;
+    background: #c0c0f0;
     border: 1.5vh black;
     border-style: solid;
     margin: 11vh auto;
+    padding: 50px 0;
     width: 50vw;
-    height: 75vh;
     border-radius: 20px;
     justify-content: center;
     text-align: center;
