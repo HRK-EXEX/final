@@ -1,0 +1,12 @@
+
+.master-box {
+    display: flex;
+    border: 1px black solid;
+    margin: auto;
+    padding: 20px;
+    width: 50vw;
+    height: 60vh;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
