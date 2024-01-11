@@ -1,0 +1,80 @@
+body {
+    margin: 8px auto;
+    width: 75vw;
+    max-width: 1440px;
+}
+
+.titlebar {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px auto;
+    width: 100%;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.contents1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto 10px auto;
+    height: 55vh;
+}
+
+.get-treasure {
+    background: #f0f080;
+    border: 8px black;
+    border-style: solid;
+    width: 35.1vw;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.use-items {
+    background: #80f0f0;
+    border: 8px black;
+    border-style: solid;
+    width: 35.1vw;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.contents2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto 10px auto;
+    height: 25vh;
+}
+
+.show-lineup {
+    background: #80f080;
+    border: 8px black;
+    border-style: solid;
+    width: 22.5vw;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.show-histories {
+    background: #f08080;
+    border: 8px black;
+    border-style: solid;
+    width: 22.5vw;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.others {
+    background: #c0c0c0;
+    border: 8px black;
+    border-style: solid;
+    width: 22.5vw;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+}
