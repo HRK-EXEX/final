@@ -8,6 +8,7 @@
     </head>
     <body>
         <div>
+            
             <div class="titlebar">
                 <img src="img/title.png" alt="トレ「ガ」ヂャー">
             </div>
@@ -42,6 +43,7 @@
                     </a>
                 </div>
             </div>
+
         </div>
     </body>
 </html>

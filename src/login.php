@@ -9,10 +9,13 @@
     <body>
         <div class="master-box">
             <div>
+                <?php
+                    
+                ?>
                 <form action="logging.php" method="post">
                     <img src="img/title.png" alt="トレ「ガ」ヂャー"><br><br>
-                    <input class="text" type="text" placeholder="アカウントID"><br>
-                    <input class="text" type="password" placeholder="パスワード"><br>
+                    <input class="text" name="id" type="text" required placeholder="アカウントID"><br>
+                    <input class="text" name="pass" type="password" required placeholder="パスワード"><br>
                     <button>入場する</button><br>
                 </form>
 

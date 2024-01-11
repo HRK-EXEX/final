@@ -47,7 +47,8 @@ CREATE TABLE IF NOT EXISTS Histories (
     FOREIGN KEY (treasure_id) REFERENCES Treasures (treasure_id)
 );
 
-INSERT INTO Accounts VALUE ('必殺奥義！ッ管理者権限!!ッ', 'Administrator', '¯\_(ツ)_/¯', 1, 0, 0);
+-- ¯\_(ツ)_/¯ --
+INSERT INTO Accounts VALUE ('必殺奥義！ッ管理者権限!!ッ', 'Administrator', 'ADMINNNN', 1, 0, 0);
 
 INSERT INTO Categories (category_name) VALUES
     ('日用品'),
