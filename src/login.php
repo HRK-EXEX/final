@@ -10,12 +10,17 @@
         <div class="master-box">
             <div>
                 <?php
-                    
+                    $err = $_GET['err'] ?? null;
+                    switch ($err) {
+                        case '1':
+                            echo 'アカウント名またはパスワードが一致しません。';
+                            break;
+                    }
                 ?>
                 <form action="logging.php" method="post">
                     <img src="img/title.png" alt="トレ「ガ」ヂャー"><br><br>
                     <input class="text" name="id" type="text" required placeholder="アカウントID"><br>
-                    <input class="text" name="pass" type="password" required placeholder="パスワード"><br>
+                    <input class="text" name="pswd" type="password" required placeholder="パスワード"><br>
                     <button>入場する</button><br>
                 </form>
 
