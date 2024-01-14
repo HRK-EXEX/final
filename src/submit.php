@@ -9,7 +9,7 @@
     <body>
         <div class="master-box">
             <div>
-                <?php require 'headerNoLink.php' ?>
+                <?php require 'headerNoLink.html' ?>
                 <form action="submitting.php" method="post">
                     <img src="img/submit.png" alt="新規登録"><br><br>
 

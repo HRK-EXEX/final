@@ -8,9 +8,8 @@
     </head>
     <body>
         <div class="master-box">
+            <?php require 'header.html' ?>
             <div>
-                <?php require 'header.html' ?>
-
                 <p class="text">ログアウトしますか？</p>
 
                 <div class="buttons">

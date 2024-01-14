@@ -9,8 +9,8 @@
     <body>
         <div class="master-box">
             <div>
+                <?php require 'headerNoLink.html' ?>
                 <form action="logging.php" method="post">
-                    <?php require 'headerNoLink.php' ?>
                     
                     <?php
                         $id = $_POST['id'] ?? null;

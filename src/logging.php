@@ -19,6 +19,8 @@
                 'acc_pswd' => $pswd
             ];
             header('Location: index.php');
+        } else {
+            header('Location: login.php?err=1', true, 307);
         }
     } else {
         header('Location: login.php?err=1', true, 307);
