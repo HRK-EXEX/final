@@ -1,20 +1,22 @@
 <?php session_start(); ?>
 <?php require 'initial/db-connect.php' ?>
 <?php
-    unset($_COOKIE['loginfo']);
+    unset($_SESSION['loginfo']);
     $id = $_POST['id'];
     $pswd = $_POST['pswd'];
     $exp = 0;
-
-    $sql = $db -> prepare("SELECT * FROM Accounts WHERE account_id = ?");
-    $sql -> execute(["'".$id."'"]);
+    
+    // echo 'SELECT * FROM Accounts WHERE account_id=', $id;
+    $sql = $db -> prepare('SELECT * FROM Accounts WHERE account_id=?;');
+    $sql -> execute([$id]);
 
     $res = $sql -> fetch(PDO::FETCH_ASSOC);
     if($res) {
+        // print_r($res);
         if($res['account_pswd'] == $pswd){
-            $_COOKIE['loginfo'] = [
-                'acc_id' -> $id,
-                'pswd' -> $pswd
+            $_SESSION['loginfo'] = [
+                'acc_id' => $id,
+                'acc_pswd' => $pswd
             ];
             header('Location: index.php');
         }

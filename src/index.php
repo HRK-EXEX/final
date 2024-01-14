@@ -4,13 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>トレ「ガ」ヂャー</title>
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <div>
-            <div class="titlebar">
-                <img src="img/title.png" alt="トレ「ガ」ヂャー">
-            </div>
+            <?php require 'header.html' ?>
                 
             <div class="contents1">
                 <div class="get-treasure">

@@ -12,6 +12,7 @@
             $admin = false;
             if($_COOKIE['loginfo']['pswd'] == '必殺奥義！ッ管理者権限!!ッ') $admin = true;
         ?>
+        <?php require 'header.html' ?>
         <h1>ラインナップ</h1>
         <table>
             <thead>

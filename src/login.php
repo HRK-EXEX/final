@@ -4,13 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>トレ「ガ」ヂャー - ログイン</title>
-        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/login.css">
     </head>
     <body>
         <div class="master-box">
             <div>
                 <form action="logging.php" method="post">
-                    <img src="img/title.png" alt="トレ「ガ」ヂャー"><br>
+                    <?php require 'headerNoLink.php' ?>
                     
                     <?php
                         $id = $_POST['id'] ?? null;
@@ -34,7 +34,7 @@
                 </form>
 
                 <p><br>↓アカウントをお持ちでない方↓</p>
-                <button onclick="location.href='submit.html'">入場準備</button>
+                <button onclick="location.href='submit.php'">入場準備</button>
             </div>
         </div>
     </body>

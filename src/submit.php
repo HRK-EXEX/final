@@ -9,11 +9,26 @@
     <body>
         <div class="master-box">
             <div>
+                <?php require 'headerNoLink.php' ?>
                 <form action="submitting.php" method="post">
                     <img src="img/submit.png" alt="新規登録"><br><br>
-                    <input class="text" type="text" placeholder="アカウントID"><br>
-                    <input class="text" type="text" placeholder="アカウント名"><br>
-                    <input class="text" type="password" placeholder="パスワード"><br>
+
+                    <?php
+                        $id = $_POST['id'] ?? null;
+                        $name = $_POST['name'] ?? null;
+                        $pswd = $_POST['pswd'] ?? null;
+
+                        $err = $_GET['err'] ?? null;
+                        switch ($err) {
+                            case 1:
+                                echo 'そのアカウントIDはすでに使用されています。<br>';
+                                break;
+                        }
+                    ?>
+
+                    <input class="text" type="text" name="id" placeholder="アカウントID" required><br>
+                    <input class="text" type="text" name="name" placeholder="アカウント名" required><br>
+                    <input class="text" type="password" name="pswd" placeholder="パスワード" required><br>
                     <button>登録する</button><br>
                 </form>
             </div>

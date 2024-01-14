@@ -15,19 +15,9 @@
 .text {
     margin-bottom: 2vh;
     height: 4vh;
-    font-size: 3vh;
-    border: 2px #a0a0a0 solid;
-    border-radius: 10px;
-}
-
-.finished {
-    margin-bottom: 2vh;
-    height: 4vh;
     font-size: 4vh;
 }
 
 .buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 20vw;
+    margin: 0 auto;
 }
