@@ -1,0 +1,75 @@
+.centering {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.text {
+    margin-bottom: 2vh;
+    height: 4vh;
+    font-size: 3vh;
+    border: 2px #a0a0a0 solid;
+    border-radius: 10px;
+}
+
+.control {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+table, th, td{
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    padding: 8px;
+    font-size: 20px;
+}
+
+table {
+    margin: auto;
+}
+
+th {
+    background-color: #28c;
+    font-size: 20px;
+}
+tbody>tr:nth-child(2n) {
+    background-color: #9bd;
+}
+tbody>tr:nth-child(2n+1) {
+    background-color: #bdf;
+}
+
+input, textarea {
+    resize: vertical;
+    width: 400px;
+    font-size: 20px;
+}
+
+textarea { height:225px }
+
+.go {
+    font-size: 15px;
+	
+	padding: 8px;
+	border: 1px solid black;
+	border-radius: 20px;
+	width: 100px;
+	color: inherit;
+	cursor: pointer;
+	background: #de3;
+
+	transition: all 0.1s;
+}
+
+.go:hover {
+	background: rgb(255, 176, 103);
+}
+
+.go:active {
+	background: rgb(53, 50, 255);
+	color: wheat;
+}

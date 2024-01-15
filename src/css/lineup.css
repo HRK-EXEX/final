@@ -28,18 +28,35 @@
     margin: 0px 8px 8px 0px;
     padding: 4px 12px;
     font-size: 30px;
+    color: #fff;
+    text-decoration: none;
 }
 
 .create {
     background: #2090f0;
+    transition: all 0.1s;
+}
+.create:hover {
+    background: #fff;
+    color: #2090f0;
 }
 
 .update {
     background: #40c080;
+    transition: all 0.1s;
+}
+.update:hover {
+    background: #fff;
+    color: #40c080;
 }
 
 .delete {
     background: #f03008;
+    transition: all 0.1s;
+}
+.delete:hover {
+    background: #fff;
+    color: #f03008;
 }
 
 table, th, td{
@@ -50,4 +67,14 @@ table, th, td{
 
 table {
     margin: auto;
+}
+
+thead>tr {
+    background-color: #28c;
+}
+tbody>tr:nth-child(2n) {
+    background-color: #9bd;
+}
+tbody>tr:nth-child(2n+1) {
+    background-color: #bdf;
 }

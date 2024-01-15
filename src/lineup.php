@@ -2,6 +2,17 @@
 <?php require 'initial/db-connect.php' ?>
 <!DOCTYPE html>
 
+<?php
+    $ranklist = "EDCBAS";
+    function showRank(string $rank) {
+        global $ranklist;
+        if ($rank < mb_strlen($ranklist)) {
+            return $ranklist[$rank];
+        }
+        return $ranklist[4].strval($rank-4);
+    }
+?>
+
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -13,7 +24,7 @@
         <div class="centering">
             <?php
                 $admin = false;
-                $sql = $db -> query("SELECT * FROM Accounts WHERE account_nick='Administrator'");
+                $sql = $db -> query("SELECT * FROM Accounts WHERE account_id='必殺奥義！ッ管理者権限!!ッ'");
                 $res = $sql -> fetch(PDO::FETCH_ASSOC);
                 if($_SESSION['loginfo']['acc_id'] == $res['account_id']) $admin = true;
             ?>
@@ -22,7 +33,7 @@
             <?php
                 if($admin) {
                     echo '
-                    <h1 class="admin_text">管理者モード発動!!!</h1>
+                    <h2 class="admin_text">管理者モード発動!!!</h2>
                     <div class="control">
                         <a class="create" href="newTreasure.php">追加</a>
                         <a class="update" href="modTreasure.php">更新</a>
@@ -49,7 +60,7 @@
                             echo '<tr>';
                             echo '<td>', $row['treasure_name'], '</td>';
                             echo '<td>', $row['treasure_desc'], '</td>';
-                            echo '<td>', $row['treasure_rank'], '</td>';
+                            echo '<td>', showRank($row['treasure_rank']), '</td>';
                             echo '<td>', $row['treasure_price'], '</td>';
                             // echo '<td>', $row['treasure_ctgr'], '</td>';
                             echo '</tr>';
