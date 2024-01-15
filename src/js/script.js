@@ -4,17 +4,16 @@
 
 var ranklist = "EDCBAS";
 function showRank(rank) {
-    rank = parseInt(rank, 10);
-    if (rank < ranklist.length) {
-        return ranklist.charAt(rank);
-    } else if (rank == "" || rank == null) {
-        return "";
+    if (rank != "" || rank != null) {
+        if (rank < ranklist.length) {
+            return ranklist.charAt(rank);
+        } else return ranklist.charAt(5)+(rank-5);
     }
-    return ranklist.charAt(4)+(rank-4);
+    return "";
 }
 
 function previewRank() {
     var rank = document.getElementById('rank');
     var show = document.getElementById('previewZone');
-    show.innerHTML = showRank(rank);
+    show.innerHTML = showRank(rank.value);
 }

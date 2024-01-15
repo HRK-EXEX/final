@@ -4,6 +4,8 @@
 
 <?php
     $ranklist = "EDCBAS";
+    $id = $_POST['id'] ?? null;
+
     function showRank(string $rank) {
         global $ranklist;
         if ($rank < mb_strlen($ranklist)) {

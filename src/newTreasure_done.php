@@ -3,25 +3,11 @@
 <!DOCTYPE html>
 
 <?php
-    $ranklist = "EDCBAS";
-    function showRank(string $rank) {
-        global $ranklist;
-        if ($rank < mb_strlen($ranklist)) {
-            return $ranklist[$rank];
-        }
-        return $ranklist[4].strval($rank-4);
-    }
-
     $name = $_POST['name'] ?? null;
-    $sql = $db -> prepare('SELECT * FROM Treasures WHERE treasure_name=?');
-    $sql -> execute([$name]);
-    $res = $sql -> fetch(PDO::FETCH_ASSOC);
-
-    $name = $res['name'] ?? null;
-    $desc = $res['desc'] ?? null;
-    $rank = $res['rank'] ?? null;
-    $price = $res['price'] ?? null;
-    $ctgr = $res['ctgr'] ?? null;
+    $desc = $_POST['desc'] ?? null;
+    $rank = $_POST['rank'] ?? null;
+    $price = $_POST['price'] ?? null;
+    $ctgr = $_POST['ctgr'] ?? null;
 ?>
 
 <html lang="en">

@@ -78,3 +78,7 @@ tbody>tr:nth-child(2n) {
 tbody>tr:nth-child(2n+1) {
     background-color: #bdf;
 }
+
+.left { text-align: left; }
+.middle { text-align: middle; }
+.right { text-align: right; }
