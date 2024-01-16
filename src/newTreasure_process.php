@@ -28,7 +28,7 @@
         $sql = $db -> prepare('INSERT INTO Treasures VALUE (NULL, ?, ?, ?, ?, ?)');
         $sql -> execute([$name, $desc, $rank, $price, $res['category_id']]);
 
-        header('Location: newTreasure_done.php');
+        header('Location: newTreasure_done.php', true, 307);
     } else {
         header('Location: newTreasure.php?err=1', true, 307);
     }

@@ -51,6 +51,7 @@ CREATE TABLE IF NOT EXISTS Histories (
 INSERT INTO Accounts VALUE ('必殺奥義！ッ管理者権限!!ッ', 'Administrator', 'ADMINNNN', 1, 0, 0);
 
 INSERT INTO Categories (category_name) VALUES
+    ('無分類'),
     ('日用品'),
     ('高級品'),
     ('インテリア'),

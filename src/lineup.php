@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php require 'initial/db-connect.php' ?>
 <!DOCTYPE html>
-
+<?php require 'unitNumberJP.php' ?>
 <?php
     $ranklist = "EDCBAS";
     function showRank(string $rank) {
@@ -34,11 +34,12 @@
                 if($admin) {
                     echo '
                     <h2 class="admin_text">管理者モード発動!!!</h2>
-                    <form method="POST">
+                    <form action="?" name="dataform" method="GET">
                     <div class="control">
-                        <a class="create" href="newTreasure.php">追加</a>
-                        <a class="update" href="modTreasure.php">更新</a>
-                        <a class="delete" href="delTreasure.php">削除</a>
+                    <button class="create" formaction="newTreasure.php">追加</button>
+                    <button class="update" formaction="modTreasure.php">更新</button>
+                    <button class="delete" formaction="delTreasure.php">削除</button>
+                    <a class="deletectgr" href="delCategory.php">カテゴリ削除</a>
                     </div>';
                 }
             ?>
@@ -63,12 +64,14 @@
 
                         foreach($res as $row) {
                             echo '<tr>';
-                            echo '<td><input type="radio" name="id"></td>';
+                            echo '<td><input type="radio" name="id" value="', $row['treasure_id'], '"';
+                            if ($row['treasure_id'] == 1) echo ' checked';
+                            echo '></td>';
                             echo '<td class="left">', $row['treasure_name'], '</td>';
                             echo '<td class="left">', nl2br($row['treasure_desc']), '</td>';
                             echo '<td class="left">', $row['category_name'], '</td>';
                             echo '<td class="middle">', showRank($row['treasure_rank']), '</td>';
-                            echo '<td class="right">', $row['treasure_price'], '</td>';
+                            echo '<td class="right">', unitNumberJP($row['treasure_price']), '</td>';
                             echo '</tr>';
                         }
                     ?>

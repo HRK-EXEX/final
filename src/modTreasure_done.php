@@ -14,18 +14,18 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>トレ「ガ」ヂャー - 新規財宝登録完了</title>
+        <title>トレ「ガ」ヂャー - 財宝情報変更完了</title>
         <link rel="stylesheet" href="css/control.css">
     </head>
     <body onload="previewRank()">
         <div class="centering">
-            <h1>新規財宝登録完了</h1>
+            <h1>財宝情報変更完了</h1>
             <form action="lineup.php">
                 <input id="rank" type="hidden" value="<?=$rank?>">
                 <table>
                     <tbody>
                         <tr><th>宝の名前</th><td><?=$name?></td></tr>
-                        <tr><th>説明</th><td><?php nl2br($desc) ?></td></tr>
+                        <tr><th>説明</th><td><?=nl2br($desc)?></td></tr>
                         <tr>
                             <th>ランク</th>
                             <td>

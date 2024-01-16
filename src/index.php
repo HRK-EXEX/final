@@ -9,7 +9,6 @@
     <body>
         <div>
             <?php require 'header.html' ?>
-                
             <div class="contents1">
                 <div class="get-treasure">
                     <a href="game.php">
@@ -22,7 +21,6 @@
                     </a>
                 </div>
             </div>
-            
             <div class="contents2">
                 <div class="show-lineup">
                     <a href="lineup.php">
@@ -40,7 +38,6 @@
                     </a>
                 </div>
             </div>
-
         </div>
     </body>
 </html>
