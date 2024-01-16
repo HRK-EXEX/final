@@ -1,7 +1,6 @@
 <?php session_start(); ?>
 <?php require 'initial/db-connect.php' ?>
-<!DOCTYPE html>
-<?php require 'unitNumberJP.php' ?>
+<?php require 'initial/unitNumberJP.php' ?>
 <?php
     $ranklist = "EDCBAS";
     function showRank(string $rank) {
@@ -13,6 +12,7 @@
     }
 ?>
 
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -40,7 +40,16 @@
                     <button class="update" formaction="modTreasure.php">更新</button>
                     <button class="delete" formaction="delTreasure.php">削除</button>
                     <a class="deletectgr" href="delCategory.php">カテゴリ削除</a>
-                    </div>';
+                    </div>
+                    ';
+                }
+            ?>
+            <?php
+                $err = $_GET['err'] ?? null;
+                switch ($err) {
+                    case '1':
+                        echo 'エラー: 財宝が指定されていません。<br>';
+                        break;
                 }
             ?>
             <table>
@@ -71,7 +80,7 @@
                             echo '<td class="left">', nl2br($row['treasure_desc']), '</td>';
                             echo '<td class="left">', $row['category_name'], '</td>';
                             echo '<td class="middle">', showRank($row['treasure_rank']), '</td>';
-                            echo '<td class="right">', unitNumberJP($row['treasure_price']), '</td>';
+                            echo '<td class="right">', unitNumberJP($row['treasure_price'], 4), '円</td>';
                             echo '</tr>';
                         }
                     ?>

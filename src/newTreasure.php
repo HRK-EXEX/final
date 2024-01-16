@@ -59,19 +59,23 @@
                             </td>
                         </tr>
                     </tbody>
-                </table><br>
-                <br>
-                <?php
-                    $err = $_GET['err'] ?? null;
-                    switch ($err) {
-                        case '1':
-                            echo 'すでに同じ名前の財宝があります。<br>';
-                            break;
-                        case '2':
-                            echo 'すでに同じ名前のカテゴリがあります。<br>';
-                            break;
-                    }
-                ?>
+                </table>
+                <p class="warning">
+                    <?php
+                        $err = $_GET['err'] ?? null;
+                        switch ($err) {
+                            case '1':
+                                echo 'エラー: 既存の財宝は新規登録できません。<br><br>';
+                                break;
+                            case '2':
+                                echo 'エラー: 既存のカテゴリは新規登録できません。<br><br>';
+                                break;
+                        }
+                    ?>
+                    以上の財宝情報を登録します。<br>
+                    よろしいですか？<br>
+                </p>
+                <button class="go" type="button" onclick="history.back();">戻る</button>&emsp;
                 <button class="go">登録する</button>
             </form>
         </div>

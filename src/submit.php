@@ -29,7 +29,8 @@
                     <input class="text" type="text" name="id" placeholder="アカウントID" required><br>
                     <input class="text" type="text" name="name" placeholder="アカウント名" required><br>
                     <input class="text" type="password" name="pswd" placeholder="パスワード" required><br>
-                    <button>登録する</button><br>
+                    <button class="go" type="button" onclick="history.back();">戻る</button>&emsp;
+                    <button class="go">登録する</button><br>
                 </form>
             </div>
         </div>

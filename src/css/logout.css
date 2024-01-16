@@ -20,3 +20,24 @@
 .buttons {
     margin: 0 auto;
 }
+
+.go {
+    font-size: 15px;
+	
+	padding: 8px;
+	border: 1px solid black;
+	border-radius: 20px;
+	width: 100px;
+	color: inherit;
+	cursor: pointer;
+	background: #de3;
+
+	transition: all 0.1s;
+}
+.go:hover {
+	background: rgb(255, 176, 103);
+}
+.go:active {
+	background: rgb(53, 50, 255);
+	color: wheat;
+}

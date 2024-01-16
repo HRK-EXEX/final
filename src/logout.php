@@ -13,8 +13,8 @@
                 <p class="text">ログアウトしますか？</p>
 
                 <div class="buttons">
-                    <button onclick="location.href='seeyou.php'">退場する</button>
-                    <button onclick="history.back()">戻る</button>
+                    <button class="go" onclick="history.back();">戻る</button>&emsp;
+                    <button class="go" onclick="location.href='seeyou.php'">退場する</button>
                 </div>
             </div>
         </div>

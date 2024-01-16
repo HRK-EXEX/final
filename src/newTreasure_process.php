@@ -16,7 +16,7 @@
         $sql -> execute([$ctgr]);
         $res = $sql -> fetch(PDO::FETCH_ASSOC);
         
-        if ($create) {
+        if ($create == 1) {
             if ($sql -> fetch(PDO::FETCH_ASSOC) == false) {
                 $sql = $db -> prepare('INSERT INTO Categories VALUE (NULL, ?)');
                 $sql -> execute([$ctgr]);

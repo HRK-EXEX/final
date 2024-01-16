@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php require 'initial/db-connect.php' ?>
+<?php require 'initial/unitNumberJP.php' ?>
 <!DOCTYPE html>
-<?php require 'unitNumberJP.php' ?>
 <?php
     $name = $_POST['name'] ?? null;
     $desc = $_POST['desc'] ?? null;
@@ -25,21 +25,23 @@
                 <table>
                     <tbody>
                         <tr><th>宝の名前</th><td><?=$name?></td></tr>
-                        <tr><th>説明</th><td><?php nl2br($desc) ?></td></tr>
+                        <tr><th>説明</th><td><?=nl2br($desc)?></td></tr>
                         <tr>
                             <th>ランク</th>
                             <td>
                                 <span id="previewZone"></span>
                             </td>
                         </tr>
-                        <tr><th>値段</th><td><?=unitNumberJP($price)?></td></tr>
+                        <tr><th>値段</th><td><?=unitNumberJP($price, 4)?>円</td></tr>
                         <tr><th>カテゴリ<br></th><td><?=$ctgr?></td>
                         </tr>
                     </tbody>
                 </table>
-                <br>
+                <p class="done">
+                    新規財宝の登録が正常に完了しました。<br>
+                    ラインナップに追加されていることをご確認ください。
+                </p>
                 <button class="go">戻る</button>
-                <br>
             </form>
         </div>
 

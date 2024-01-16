@@ -69,16 +69,19 @@
                         </tr>
                     </tbody>
                 </table>
-                <br>
-                <?php
-                    $err = $_GET['err'] ?? null;
-                    switch ($err) {
-                        case '1':
-                            echo '何らかのエラーにより変更できません。<br>';
-                            break;
-                    }
-                ?>
-                <br>
+                <p class="warning">
+                    <?php
+                        $err = $_GET['err'] ?? null;
+                        switch ($err) {
+                            case '1':
+                                echo 'エラー: 既存のカテゴリは新規登録できません。<br><br>';
+                                break;
+                        }
+                    ?>
+                    以上の変更を確定します。<br>
+                    よろしいですか？<br>
+                </p>
+                <button class="go" type="button" onclick="history.back();">戻る</button>&emsp;
                 <button class="go">登録する</button>
             </form>
         </div>

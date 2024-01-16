@@ -30,11 +30,11 @@
 
                     <input class="text" name="id" type="text" required placeholder="アカウントID" value="<?=$id?>"><br>
                     <input class="text" name="pswd" type="password" required placeholder="パスワード" value="<?=$pswd?>"><br>
-                    <button type="submit">入場する</button><br>
+                    <button class="go" type="submit">入場する</button><br>
                 </form>
 
                 <p><br>↓アカウントをお持ちでない方↓</p>
-                <button onclick="location.href='submit.php'">入場準備</button>
+                <button class="go" onclick="location.href='submit.php'">入場準備</button>
             </div>
         </div>
     </body>
