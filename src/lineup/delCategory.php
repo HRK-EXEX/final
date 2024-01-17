@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php require 'initial/db-connect.php' ?>
+<?php require '../initial/db-connect.php' ?>
 <?php
     $id = $_POST['id'] ?? 0;
     $sql = $db -> query("SELECT * FROM Categories");
@@ -12,9 +12,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>トレ「ガ」ヂャー - カテゴリ削除</title>
-        <link rel="stylesheet" href="css/control.css">
+        <link rel="stylesheet" href="../css/control.css">
     </head>
-    <body onload="previewRank()">
+    <body>
         <div class="centering">
             <h1>カテゴリ選択・削除確認</h1>
             <form action="delCategory_process.php" method="post">
@@ -22,6 +22,7 @@
                 <p class="text">カテゴリを選んでください。</p>
                 <select class="text" name="ctgr" required>
                     <?php
+                        $i = 0;
                         foreach($res as $row){
                             echo '<option value="', $row['category_name'], '">', $row['category_name'], '</option>';
                         }

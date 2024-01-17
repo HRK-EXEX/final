@@ -1,6 +1,6 @@
 <?php session_start(); ?>
-<?php require 'initial/db-connect.php' ?>
-<?php require 'initial/unitNumberJP.php' ?>
+<?php require '../initial/db-connect.php' ?>
+<?php require '../initial/unitNumberJP.php' ?>
 <?php
     $ranklist = "EDCBAS";
     
@@ -28,13 +28,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>トレ「ガ」ヂャー - 財宝情報削除完了</title>
-        <link rel="stylesheet" href="css/control.css">
+        <link rel="stylesheet" href="../css/control.css">
     </head>
     <body onload="previewRank()">
         <div class="centering">
             <h1>財宝情報削除完了</h1>
             <input type="hidden" value="<?=$rank?>" id="rank">
-            <form action="lineup.php">
+            <form action="index.php">
                 <table>
                     <tbody>
                         <tr><th>宝の名前</th><td><?=$name?></td></tr>

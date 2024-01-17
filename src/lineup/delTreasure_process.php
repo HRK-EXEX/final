@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php require 'initial/db-connect.php' ?>
+<?php require '../initial/db-connect.php' ?>
 <?php
     $id = $_GET['id'] ?? null;
     $name = $_POST['name'] ?? null;

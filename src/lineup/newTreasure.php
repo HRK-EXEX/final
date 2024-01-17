@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php require 'initial/db-connect.php' ?>
+<?php require '../initial/db-connect.php' ?>
 <!DOCTYPE html>
 
 <?php
@@ -27,7 +27,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>トレ「ガ」ヂャー - 新規財宝登録</title>
-        <link rel="stylesheet" href="css/control.css">
+        <link rel="stylesheet" href="../css/control.css">
     </head>
     <body onload="zone(0)">
         <div class="centering">

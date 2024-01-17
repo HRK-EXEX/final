@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php require 'initial/db-connect.php' ?>
+<?php require '../initial/db-connect.php' ?>
 <?php
     $id = $_GET['id'] ?? null;
     $name = $_POST['name'] ?? null;
@@ -31,7 +31,11 @@
             treasure_price = ?, treasure_ctgr = ? WHERE treasure_id = ?'
     );
 
-    $sql -> execute([$name, $desc, $rank, $price, $res['category_id'], $treasures['treasure_id']]);
+    if ($create == 1) {
+        $sql -> execute([$name, $desc, $rank, $price, $ctgr, $treasures['treasure_id']]);
+    } else {
+        $sql -> execute([$name, $desc, $rank, $price, $res['category_id'], $treasures['treasure_id']]);
+    }
 
     header("Location: modTreasure_done.php?id=$id", true, 307);
 ?>

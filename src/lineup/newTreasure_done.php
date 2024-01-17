@@ -1,6 +1,6 @@
 <?php session_start(); ?>
-<?php require 'initial/db-connect.php' ?>
-<?php require 'initial/unitNumberJP.php' ?>
+<?php require '../initial/db-connect.php' ?>
+<?php require '../initial/unitNumberJP.php' ?>
 <!DOCTYPE html>
 <?php
     $name = $_POST['name'] ?? null;
@@ -15,12 +15,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>トレ「ガ」ヂャー - 新規財宝登録完了</title>
-        <link rel="stylesheet" href="css/control.css">
+        <link rel="stylesheet" href="../css/control.css">
     </head>
     <body onload="previewRank()">
         <div class="centering">
             <h1>新規財宝登録完了</h1>
-            <form action="lineup.php">
+            <form action="index.php">
                 <input id="rank" type="hidden" value="<?=$rank?>">
                 <table>
                     <tbody>

@@ -1,6 +1,6 @@
 <?php session_start(); ?>
-<?php require 'initial/db-connect.php' ?>
-<?php require 'initial/unitNumberJP.php' ?>
+<?php require '../initial/db-connect.php' ?>
+<?php require '../initial/unitNumberJP.php' ?>
 <?php
     $ranklist = "EDCBAS";
     function showRank(string $rank) {
@@ -18,7 +18,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>トレ「ガ」ヂャー - 宝物一覧</title>
-        <link rel="stylesheet" href="css/lineup.css">
+        <link rel="stylesheet" href="../css/lineup.css">
     </head>
     <body>
         <div class="centering">
@@ -28,7 +28,7 @@
                 $res = $sql -> fetch(PDO::FETCH_ASSOC);
                 if($_SESSION['loginfo']['acc_id'] == $res['account_id']) $admin = true;
             ?>
-            <?php require 'header.html' ?>
+            <?php require '../header.html' ?>
             <h1>ラインナップ</h1>
             <?php
                 if($admin) {

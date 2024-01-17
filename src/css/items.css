@@ -1,0 +1,80 @@
+.centering {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.text {
+    margin-bottom: 2vh;
+    height: 4vh;
+    font-size: 3vh;
+    border: 2px #a0a0a0 solid;
+    border-radius: 10px;
+}
+
+.control {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.control>a, .control>button {
+    border: 8px black;
+    border-style: solid;
+    border-radius: 0px;
+    margin: 0px 8px 8px 0px;
+    padding: 4px 12px;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+}
+
+table, th, td{
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    padding: 4px;
+}
+
+table {
+    margin: auto;
+}
+
+thead>tr {
+    background-color: #c82;
+}
+tbody>tr:nth-child(2n) {
+    background-color: #db9;
+}
+tbody>tr:nth-child(2n+1) {
+    background-color: #fdb;
+}
+
+.left { text-align: left; }
+.middle { text-align: middle; }
+.right { text-align: right; }
+
+.go {
+    font-size: 15px;
+	
+	padding: 8px;
+	border: 1px solid black;
+	border-radius: 20px;
+	width: 100px;
+	color: inherit;
+	cursor: pointer;
+	background: rgb(51, 154, 238);
+
+	transition: all 0.1s;
+}
+
+.go:hover {
+	background: rgb(103, 255, 255);
+}
+
+.go:active {
+	background: rgb(6, 42, 77);
+	color: wheat;
+}

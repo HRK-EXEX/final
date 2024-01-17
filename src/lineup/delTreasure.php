@@ -1,6 +1,6 @@
 <?php session_start(); ?>
-<?php require 'initial/db-connect.php' ?>
-<?php require 'initial/unitNumberJP.php' ?>
+<?php require '../initial/db-connect.php' ?>
+<?php require '../initial/unitNumberJP.php' ?>
 <?php
     $ranklist = "EDCBAS";
     $id = $_GET['id'] ?? null;
@@ -9,7 +9,7 @@
         $sql = $db -> query("SELECT * FROM Treasures LEFT JOIN Categories
         ON Treasures.treasure_ctgr = Categories.category_id WHERE treasure_id=$id");
     else
-        header("Location: lineup.php?err=1");
+        header("Location: index.php?err=1");
 
     $res = $sql -> fetch(PDO::FETCH_ASSOC);
     
@@ -37,7 +37,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>トレ「ガ」ヂャー - 財宝情報削除</title>
-        <link rel="stylesheet" href="css/control.css">
+        <link rel="stylesheet" href="../css/control.css">
     </head>
     <body onload="previewRank()">
         <div class="centering">
