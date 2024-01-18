@@ -63,13 +63,12 @@ INSERT INTO Categories (category_name) VALUES
 ;
 
 INSERT INTO Items (item_name, item_desc, item_point) VALUES
-    ('挑戦券', 'ゲーム開始前に１枚必要。', 10),
     ('運気券', '宝が当たりやすくなる。', 15),
     ('超運券', '必ず宝が当たるようになる。', 50),
     ('豪運券', '必ずレアな宝が当たるようになる。(Aランク以上)', 200),
     ('欲張り屋', '全ての宝箱を開けられる。', 80),
     ('Ｘ視線', '宝箱の中身を見ることができる。', 100),
-    ('権限の暴力', '入手したい宝を選ぶことができる。', 9999)
+    ('権限の暴力', '入手したい宝を選ぶことができる。', 10000)
 ;
 
 INSERT INTO Treasures (treasure_name, treasure_desc, treasure_ctgr, treasure_rank, treasure_price) VALUES 
