@@ -24,7 +24,9 @@
                     <?php
                         $i = 0;
                         foreach($res as $row){
-                            echo '<option value="', $row['category_name'], '">', $row['category_name'], '</option>';
+                            if($i!=0)
+                                echo '<option value="', $row['category_name'], '">', $row['category_name'], '</option>';
+                            $i++;
                         }
                     ?>
                 </select>
