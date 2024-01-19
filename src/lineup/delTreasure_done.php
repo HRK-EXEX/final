@@ -9,7 +9,7 @@
         if ($rank < mb_strlen($ranklist)) {
             return $ranklist[$rank];
         }
-        return $ranklist[4].strval($rank-4);
+        return $ranklist[5].strval($rank-4);
     }
 
     $name = $_POST['name'] ?? null;
