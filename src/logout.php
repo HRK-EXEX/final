@@ -8,7 +8,7 @@
     </head>
     <body>
         <div class="master-box">
-            <?php require 'header.html' ?>
+            <?php require 'headerTitle.html' ?>
             <div>
                 <p class="text">ログアウトしますか？</p>
 

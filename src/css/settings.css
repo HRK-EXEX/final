@@ -4,17 +4,6 @@ body {
     max-width: 1440px;
 }
 
-.titlebar {
-    display: flex;
-    justify-content: space-between;
-    margin: 8px auto;
-    width: 100%;
-    border-radius: 20px;
-    text-align: center;
-    align-items: center;
-    height: 10vh;
-}
-
 .options {
     background: #f0f080;
     border: 8px black;

@@ -30,7 +30,6 @@
                     'エラー: アイテムを持っていないので、破棄することができません。',
                 ];
                 echo '<p>', ERR_TXT[$err], '</p>';
-                print_r($ids);
             ?>
             <form action="?" method="post">
                 <table>

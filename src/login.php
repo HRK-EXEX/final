@@ -9,7 +9,7 @@
     <body>
         <div class="master-box">
             <div>
-                <?php require 'headerNoLink.html' ?>
+                <?php require 'headerTitleNoLink.html' ?>
                 <form action="logging.php" method="post">
                     
                     <?php

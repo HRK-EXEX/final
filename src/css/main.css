@@ -1,0 +1,23 @@
+.centering {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.box {
+    padding: 0;
+    margin: 0;
+    width: 25%;
+    height: auto;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+input[type="radio"] + label img {
+    opacity:0.5;
+}
+
+input[type="radio"]:checked + label img {
+    opacity:1;
+}

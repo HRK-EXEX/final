@@ -8,7 +8,7 @@
     </head>
     <body>
         <div class="master-box">
-            <?php require 'header.html' ?>
+            <?php require 'headerTitle.html' ?>
             <div>
                 <p class="finished">登録が完了しました。</p>
                 <button onclick="location.href='index.php'">ホーム画面へ</button><br>
