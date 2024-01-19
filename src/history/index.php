@@ -49,13 +49,19 @@
                         </tr>
                     </thead>
                     <tbody>';
-                    foreach($item as $row) {
+                    foreach($his as $row) {
+                        $name = $tres[$row['treasure_id']]['treasure_name'];
+                        $cnt = 0;
+                        foreach($tres as $treasure) {
+                            if($name == $treasure['treasure_name']) {
+                                $cnt++;
+                            }
+                        }
+
                         echo '<tr>';
-                        echo '></td>', "\n";
-                        echo '<td class="left">', $row['treasure_name'], '</td>', "\n";
-                        echo '<td class="right">', $cnt, ' pts</td>', "\n";
+                        echo '<td class="left">', $name, '</td>', "\n";
+                        echo '<td class="right">', $cnt, ' 回</td>', "\n";
                         echo '</tr>';
-                        $cnt++;
                     }
                     echo '</tbody>
                     </table><br>';

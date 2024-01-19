@@ -12,20 +12,34 @@
     object-view-box: inset(200px 0 0 0);
 }
 
-.text {
-    margin-bottom: 2vh;
-    height: 4vh;
-    font-size: 3vh;
-}
-
 input[type=radio] {
     display: none;
 }
 
 input[type="radio"] + label img {
     opacity:0.5;
+    border: 2px #0000 solid
 }
 
 input[type="radio"]:hover + label img {
     opacity:1;
+}
+
+input[type="radio"]:checked + label img {
+    opacity:1;
+    border: 2px #000f solid
+}
+
+.go {
+    font-size: 3vh;
+	
+	padding: 8px;
+	border: 1px solid black;
+	border-radius: 20px;
+	width: 100px;
+	color: inherit;
+	cursor: pointer;
+	background: rgb(51, 238, 76);
+
+	transition: all 0.1s;
 }
