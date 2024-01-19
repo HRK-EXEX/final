@@ -1,3 +1,11 @@
+<?php require 'initial/login-check.php' ?>
+<?php require 'initial/db-connect.php' ?>
+<?php
+    $sql = $db -> prepare('SELECT * FROM Accounts WHERE account_id=?');
+    $sql -> execute([$_SESSION['loginfo']['acc_id']]);
+    $res = $sql -> fetch(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,7 +19,7 @@
             <?php require 'header.html' ?>
             <div class="contents1">
                 <div class="get-treasure">
-                    <a href="game/">
+                    <a href="main/">
                         <img class="bigImg" src="img/go.png" alt="宝箱を開ける(ガチャ)">
                     </a>
                 </div>

@@ -8,6 +8,14 @@
     margin: 0;
     width: 25%;
     height: auto;
+    cursor: pointer;
+    object-view-box: inset(200px 0 0 0);
+}
+
+.text {
+    margin-bottom: 2vh;
+    height: 4vh;
+    font-size: 3vh;
 }
 
 input[type=radio] {
@@ -18,6 +26,6 @@ input[type="radio"] + label img {
     opacity:0.5;
 }
 
-input[type="radio"]:checked + label img {
+input[type="radio"]:hover + label img {
     opacity:1;
 }

@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php require '../initial/login-check.php' ?>
 <?php require '../initial/db-connect.php' ?>
 <?php require '../initial/unitNumberJP.php' ?>
 <?php

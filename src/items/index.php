@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php require '../initial/login-check.php' ?>
 <?php require '../initial/db-connect.php' ?>
 <?php
     $sql = $db -> prepare('SELECT * FROM Accounts WHERE account_id=?');

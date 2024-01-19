@@ -1,3 +1,4 @@
+<?php require 'initial/login-check.php' ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
